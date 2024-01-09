@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 
@@ -11,6 +12,7 @@
     justify-content: space-between;
     border-bottom: 2px solid black;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: peachpuff;
 }
 .Logo-container{
     margin: 10px;
@@ -35,19 +37,22 @@
     padding-right: 100px;
 }
 
-.nav-items >ul>li{
+.nav-items >ul> a{
     text-decoration: none;
     padding: 10px;
     margin: 10px;
     font-size: larger;
 }
+a:hover{
+    color: red;
+}
 
 .pro-card{
     padding: 5px;
     margin: 40px;
-    height: 350px;
+    height: 400px;
     width: 200px;
-    background-color:aquamarine;
+    background-color:rgba(215, 110, 110, 0.288);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -55,12 +60,14 @@
 }
 
 .pro-card:hover{
-    height: 300px;
+    height: 350px;
     cursor: pointer;
     border: 2px solid black;
 
 }
-
+.prod-card-button{
+    margin: 5px;
+}
 .pro-card > img{
 
     height: 70%;
@@ -180,7 +187,7 @@ button {
     margin-left: 10px;
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #61dafbdb;
+    background-color:rgba(0, 0, 0, 0.811);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -190,4 +197,25 @@ button {
 
 button:hover {
     background-color: #4285f4;
+}
+
+/* cart container styling */
+
+.cart-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-empty-logo-cont{
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    margin-top: 50px;
+}
+.cart-empty-logo-cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
 }

@@ -13,6 +13,9 @@ export const Body = () => {
   const [searchtext,setsearchtext] = useState("");
   const [filterprodlist,setfilterprodlist] = useState([]);
 
+  
+  
+
   const fetchdata = async () => {
     const tempdata = await fetch(`https://dummyjson.com/products?limit=10&skip=${page*10-10}`);
     const data = await tempdata.json();
@@ -72,7 +75,9 @@ export const Body = () => {
         {
           filterprodlist.map((item) => {
             return <Productcard
+
               key={item.id}
+              id={item.id}
               title={item.title}
               pro_img_url={item.thumbnail}
               price={item.price}
@@ -83,7 +88,7 @@ export const Body = () => {
           })
 
         }
-
+        
 
       </div>
 
